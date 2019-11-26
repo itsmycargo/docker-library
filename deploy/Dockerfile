@@ -1,6 +1,6 @@
 FROM python:3.8-alpine
 
-RUN pip install awscli --upgrade --user
+RUN pip install awscli --upgrade
 
 RUN wget -q -O /usr/local/bin/kubectl \
   https://storage.googleapis.com/kubernetes-release/release/`wget -q -O - https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl \

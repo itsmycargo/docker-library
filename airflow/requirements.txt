@@ -1,0 +1,15 @@
+Authlib
+Flask-OAuthlib
+airflow-plugins
+beautifulsoup4
+geographiclib
+geopy
+kubernetes
+numpy
+pandas
+psycopg2-binary
+pycountry
+python-dateutil
+pytz
+soupsieve
+tqdm

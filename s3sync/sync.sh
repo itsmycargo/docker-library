@@ -1,18 +1,23 @@
 #!/bin/sh
 
-set -euo pipefail
+set -eu
 
 : ${SOURCE}
 : ${TARGET}
 : ${INTERVAL:=60}
 
-sync() {
-  if aws s3 ls "${SOURCE}" >/dev/null 2>&1; then
-    aws s3 sync "${SOURCE}" "${TARGET}"
+verify() {
+  echo "Verifying Source Bucket..."
+  if aws s3 ls "${SOURCE}"; then
+    echo "Done."
   else
     echo "Source ${SOURCE} does not exist!"
     exit 1
   fi
+}
+
+sync() {
+  aws s3 sync "${SOURCE}" "${TARGET}"
 }
 
 echo "   Source Bucket: ${SOURCE}"
@@ -22,7 +27,10 @@ echo ""
 
 mkdir -p "${TARGET}"
 
+verify
+
 while true; do
   sync
+
   sleep "${INTERVAL}"
 done

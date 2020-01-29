@@ -16,7 +16,6 @@ verify() {
 sync() {
   echo "$(date) - Syncing..."
   aws s3 sync --delete "${SOURCE}" "${TARGET}"
-  echo "$(date) - Finished..."
 }
 
 echo "   Source Bucket: ${SOURCE}"

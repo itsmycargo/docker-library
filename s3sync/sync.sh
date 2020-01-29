@@ -8,16 +8,15 @@ set -eu
 
 verify() {
   echo "Verifying Source Bucket..."
-  if aws s3 ls "${SOURCE}"; then
-    echo "Done."
-  else
-    echo "Source ${SOURCE} does not exist!"
+  if ! aws s3 ls "${SOURCE}"; then
     exit 1
   fi
 }
 
 sync() {
-  aws s3 sync "${SOURCE}" "${TARGET}"
+  echo "$(date) - Syncing..."
+  aws s3 sync --delete "${SOURCE}" "${TARGET}"
+  echo "$(date) - Finished..."
 }
 
 echo "   Source Bucket: ${SOURCE}"

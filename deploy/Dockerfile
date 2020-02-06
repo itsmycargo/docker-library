@@ -8,13 +8,12 @@ RUN wget -q -O /usr/local/bin/kubectl \
 
 RUN apk add --no-cache --update ca-certificates zip
 
-ARG HELM_VERSION=2.16.1
+ARG HELM_VERSION=3.0.3
 
 RUN wget -q "https://get.helm.sh/helm-v${HELM_VERSION}-linux-amd64.tar.gz" \
     && tar zx -f helm-v${HELM_VERSION}-linux-amd64.tar.gz linux-amd64/helm \
     && mv linux-amd64/helm /usr/bin/ \
-    && rm helm-v${HELM_VERSION}-linux-amd64.tar.gz \
-    && helm init --client-only
+    && rm helm-v${HELM_VERSION}-linux-amd64.tar.gz
 
 RUN apk add --no-cache --virtual .fetchdeps bash git \
     && helm plugin install https://github.com/hypnoglow/helm-s3.git \

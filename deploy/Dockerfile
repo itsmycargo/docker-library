@@ -15,6 +15,7 @@ RUN wget -q "https://get.helm.sh/helm-v${HELM_VERSION}-linux-amd64.tar.gz" \
     && mv linux-amd64/helm /usr/bin/ \
     && rm helm-v${HELM_VERSION}-linux-amd64.tar.gz
 
-RUN apk add --no-cache --virtual .fetchdeps bash git \
+RUN apk add --no-cache --virtual .fetchdeps bash curl git \
     && helm plugin install https://github.com/hypnoglow/helm-s3.git \
+    && helm plugin install https://github.com/sstarcher/helm-release \
     && apk del .fetchdeps

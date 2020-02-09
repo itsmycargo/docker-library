@@ -6,7 +6,7 @@ RUN wget -q -O /usr/local/bin/kubectl \
   https://storage.googleapis.com/kubernetes-release/release/`wget -q -O - https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl \
   && chmod a+x /usr/local/bin/kubectl
 
-RUN apk add --no-cache --update ca-certificates zip
+RUN apk add --no-cache --update ca-certificates git zip
 
 ARG HELM_VERSION=3.0.3
 

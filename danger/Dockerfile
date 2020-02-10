@@ -1,9 +1,6 @@
-FROM ruby:2.7-alpine
+FROM ruby:2.5-alpine
 
-RUN apk add --update --no-cache \
-  git
-
-RUN gem install \
-  danger
+RUN apk add --update --no-cache git
+RUN gem install danger
 
 ENTRYPOINT ["/usr/local/bundle/bin/danger"]

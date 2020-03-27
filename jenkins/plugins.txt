@@ -6,11 +6,13 @@ aws-parameter-store
 blueocean
 blueocean-display-url
 cctray-xml
+cloudbees-jenkins-advisor
 code-coverage-api
 configuration-as-code
 configuration-as-code-secret-ssm
 credentials-binding
 datadog
+disable-github-multibranch-status
 extended-read-permission
 git
 git-changelog
@@ -32,6 +34,7 @@ pipeline-github
 pipeline-github-lib
 pipeline-timeline
 pipeline-utility-steps
+queue-cleanup
 rebuild
 simple-theme-plugin
 slack

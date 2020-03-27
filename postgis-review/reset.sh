@@ -115,7 +115,7 @@ echo '--> Setting reset timestamp comment'
 psql -d "${PGDATABASE}" -c "COMMENT ON DATABASE \"${PGDATABASE}\" IS '$(date +'%Y-%m-%d %H:%M:%S')'"
 
 echo '--> Allow Connections'
-psql -d "${PGDATABASE}" -c "ALTER DATABASE \"${PGDATABASE}\" CONNECTION LIMIT -1;"
+psql -d "${PGDATABASE}" -c "ALTER DATABASE \"${PGDATABASE}\" CONNECTION LIMIT DEFAULT;"
 
 echo '--> All done.'
 

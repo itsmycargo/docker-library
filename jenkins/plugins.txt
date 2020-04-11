@@ -11,7 +11,6 @@ code-coverage-api
 configuration-as-code
 configuration-as-code-secret-ssm
 credentials-binding
-datadog
 disable-github-multibranch-status
 extended-read-permission
 git

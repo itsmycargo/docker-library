@@ -21,7 +21,6 @@ github
 github-branch-source
 http_request
 job-dsl
-jobConfigHistory
 kubernetes
 last-changes
 lockable-resources

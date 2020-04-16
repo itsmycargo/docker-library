@@ -5,7 +5,6 @@ authorize-project
 aws-parameter-store
 blueocean
 blueocean-display-url
-cctray-xml
 cloudbees-jenkins-advisor
 code-coverage-api
 configuration-as-code
@@ -18,6 +17,7 @@ git-changelog
 git-parameter
 github
 github-branch-source
+github-oauth
 http_request
 job-dsl
 kubernetes
@@ -34,7 +34,6 @@ pipeline-timeline
 pipeline-utility-steps
 queue-cleanup
 rebuild
-simple-theme-plugin
 slack
 timestamper
 uno-choice

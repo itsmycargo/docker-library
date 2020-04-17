@@ -35,6 +35,7 @@ pipeline-utility-steps
 queue-cleanup
 rebuild
 slack
+strict-crumb-issuer
 timestamper
 uno-choice
 warnings-ng

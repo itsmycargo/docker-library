@@ -2,9 +2,11 @@ ansicolor
 antisamy-markup-formatter
 atlassian-jira-software-cloud
 authorize-project
+autograding
 aws-parameter-store
 blueocean
 blueocean-display-url
+cloudbees-disk-usage-simple
 cloudbees-jenkins-advisor
 code-coverage-api
 configuration-as-code
@@ -15,7 +17,6 @@ extended-read-permission
 git
 git-changelog
 git-parameter
-github
 github-branch-source
 github-oauth
 http_request

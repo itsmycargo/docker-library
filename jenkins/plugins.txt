@@ -35,6 +35,7 @@ pipeline-timeline
 pipeline-utility-steps
 queue-cleanup
 rebuild
+scmskip
 slack
 strict-crumb-issuer
 timestamper

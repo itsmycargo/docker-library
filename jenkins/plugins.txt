@@ -33,6 +33,7 @@ pipeline-github
 pipeline-github-lib
 pipeline-timeline
 pipeline-utility-steps
+prometheus
 queue-cleanup
 rebuild
 scmskip

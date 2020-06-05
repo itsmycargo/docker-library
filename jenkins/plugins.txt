@@ -37,6 +37,7 @@ prometheus
 queue-cleanup
 rebuild
 scmskip
+simple-theme-plugin
 slack
 strict-crumb-issuer
 timestamper

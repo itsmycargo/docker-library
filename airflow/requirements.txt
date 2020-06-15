@@ -1,6 +1,5 @@
 Authlib
 Flask-OAuthlib
-airflow-plugins
 beautifulsoup4
 geographiclib
 geopy

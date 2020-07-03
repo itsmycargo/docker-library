@@ -1,5 +1,6 @@
 ansicolor
 antisamy-markup-formatter
+artifact-manager-s3
 atlassian-jira-software-cloud
 authorize-project
 autograding
@@ -13,6 +14,7 @@ command-launcher:1.4
 configuration-as-code
 configuration-as-code-secret-ssm
 credentials-binding
+dark-theme
 disable-github-multibranch-status
 extended-read-permission
 git

@@ -1,6 +1,7 @@
 Authlib
 Flask-OAuthlib
 beautifulsoup4
+datapackage
 geographiclib
 geopy
 kubernetes

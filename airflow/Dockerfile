@@ -1,11 +1,12 @@
-FROM apache/airflow:1.10.10-python3.7
+FROM apache/airflow:1.10.11-python3.8
 
 USER root
 
 RUN set -ex \
   && apt-get update -yqq \
   && apt-get install -yqq --no-install-recommends \
-    libpq-dev
+    libpq-dev \
+    unzip
 
 USER airflow
 

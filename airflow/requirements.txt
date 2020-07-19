@@ -1,15 +1,24 @@
 Authlib
 Flask-OAuthlib
+apache-airflow[aws] == AIRFLOW_VERSION
+apache-airflow[gcp] == AIRFLOW_VERSION
+apache-airflow[google_auth] == AIRFLOW_VERSION
+apache-airflow[kubernetes] == AIRFLOW_VERSION
+apache-airflow[sentry] == AIRFLOW_VERSION
+apache-airflow[slack] == AIRFLOW_VERSION
+apache-airflow[ssh] == AIRFLOW_VERSION
 beautifulsoup4
 datapackage
+fastparquet
 geographiclib
-geopy
+geopy ~= 2.0.0
 kubernetes
-numpy
-pandas
-psycopg2-binary
+numpy ~= 1.19.0
+pandas ~= 1.0.5
+psycopg2-binary ~= 2.8.5
 pycountry
 python-dateutil
+python-snappy
 pytz
 soupsieve
 tqdm

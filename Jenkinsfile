@@ -1,5 +1,7 @@
 #!groovy
 
+@Library("common@cleanup") _
+
 defaultBuild()
 
 pipeline {
@@ -14,5 +16,11 @@ pipeline {
 
   stage("Wolfhound") {
     steps { wolfhound() }
+  }
+
+  stage("Prepare") {
+    steps {
+      defaultCheckout()
+    }
   }
 }

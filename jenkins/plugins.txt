@@ -9,7 +9,7 @@ aws-parameter-store
 blueocean
 cloudbees-jenkins-advisor
 code-coverage-api
-command-launcher:1.4
+command-launcher
 configuration-as-code
 configuration-as-code-secret-ssm
 credentials-binding
@@ -22,7 +22,7 @@ git-parameter
 github-branch-source
 github-oauth
 http_request
-jdk-tool:1.4
+jdk-tool
 job-dsl
 kubernetes
 last-changes

@@ -1,7 +1,5 @@
 #!groovy
 
-@Library("common@cleanup") _
-
 defaultBuild()
 
 pipeline {
@@ -19,9 +17,16 @@ pipeline {
       steps { wolfhound() }
     }
 
-    stage("Prepare") {
-      steps {
-        defaultCheckout()
+    stage("Build") {
+      parallel {
+        stage("airflow") { steps { dockerBuild(dir: "airflow/", image: "library/airflow") } }
+        stage("builder/node") { steps { dockerBuild(dir: "builder/node", image: "library/builder/node") } }
+        stage("builder/ruby-2.6") { steps { dockerBuild(dir: "builder/ruby-2.6", image: "library/builder/ruby-2.6") } }
+        stage("danger") { steps { dockerBuild(dir: "danger", image: "library/danger") } }
+        stage("deploy") { steps { dockerBuild(dir: "deploy", image: "library/deploy") } }
+        stage("diff-cover") { steps { dockerBuild(dir: "diff-cover", image: "library/diff-cover") } }
+        stage("imposm3") { steps { dockerBuild(dir: "imposm3", image: "library/imposm3") } }
+        stage("jenkins") { steps { dockerBuild(dir: "jenkins", image: "library/jenkins") } }
       }
     }
   }

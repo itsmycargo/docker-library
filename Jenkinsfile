@@ -14,13 +14,15 @@ pipeline {
 
   agent none
 
-  stage("Wolfhound") {
-    steps { wolfhound() }
-  }
+  stages {
+    stage("Wolfhound") {
+      steps { wolfhound() }
+    }
 
-  stage("Prepare") {
-    steps {
-      defaultCheckout()
+    stage("Prepare") {
+      steps {
+        defaultCheckout()
+      }
     }
   }
 }

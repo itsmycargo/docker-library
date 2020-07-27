@@ -9,16 +9,24 @@ apache-airflow[slack] == AIRFLOW_VERSION
 apache-airflow[ssh] == AIRFLOW_VERSION
 beautifulsoup4
 datapackage
+datapackage
 fastparquet
 geographiclib
+geopandas
+geopy
 geopy ~= 2.0.0
 kubernetes
 numpy ~= 1.19.0
 pandas ~= 1.0.5
+pandas-datapackage-reader
 psycopg2-binary ~= 2.8.5
+pyarrow
 pycountry
+pygeos
 python-dateutil
 python-snappy
 pytz
+s3fs
+shapely
 soupsieve
 tqdm

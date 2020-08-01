@@ -9,7 +9,6 @@ apache-airflow[slack] == AIRFLOW_VERSION
 apache-airflow[ssh] == AIRFLOW_VERSION
 beautifulsoup4
 datapackage
-fastparquet
 geographiclib
 geopandas
 geopy ~= 2.0.0

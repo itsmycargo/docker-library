@@ -9,7 +9,6 @@ apache-airflow[slack] == AIRFLOW_VERSION
 apache-airflow[ssh] == AIRFLOW_VERSION
 beautifulsoup4
 datapackage
-datapackage
 fastparquet
 geographiclib
 geopandas
@@ -28,4 +27,3 @@ pytz
 s3fs
 shapely
 soupsieve
-tqdm

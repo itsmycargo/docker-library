@@ -26,10 +26,7 @@ pipeline {
       steps {
         checkout scm
 
-        dockerBuilder()
-        // script {
-        //   print(affectedFiles())
-        // }
+        dockerBuilder.discover(glob: "Dockerfile")
       }
     }
 

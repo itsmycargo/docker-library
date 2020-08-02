@@ -26,7 +26,9 @@ pipeline {
       steps {
         checkout scm
 
-        dockerBuilder.discover(glob: "Dockerfile")
+        script {
+          dockerBuilder.discover()
+        }
       }
     }
 

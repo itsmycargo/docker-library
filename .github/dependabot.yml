@@ -1,6 +1,46 @@
 version: 2
 updates:
   - package-ecosystem: "docker"
-    directory: "/"
+    directory: "/airflow"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "docker"
+    directory: "/builder"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "docker"
+    directory: "/builder/node"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "docker"
+    directory: "/builder/ruby-2.6"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "docker"
+    directory: "/builder/ruby-2.6-alpine"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "docker"
+    directory: "/danger"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "docker"
+    directory: "/deploy"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "docker"
+    directory: "/diff-cover"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "docker"
+    directory: "/imposm3"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "docker"
+    directory: "/jenkins"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "docker"
+    directory: "/postgis-review"
     schedule:
       interval: "daily"

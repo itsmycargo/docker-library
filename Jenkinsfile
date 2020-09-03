@@ -12,7 +12,7 @@ pipeline {
 
   stages {
     stage("Prepare") {
-      agent { kubernetes }
+      agent { kubernetes {} }
       steps { checkout(scm) }
     }
 

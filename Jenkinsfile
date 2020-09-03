@@ -5,16 +5,15 @@ defaultBuild()
 pipeline {
   options {
     podTemplate(inheritFrom: "default")
-    preserveStashes()
-    skipDefaultCheckout()
-    timeout(60)
+    timeout(30)
   }
 
   agent none
 
   stages {
-    stage("Wolfhound") {
-      steps { wolfhound() }
+    stage("Prepare") {
+      agent { kubernetes }
+      steps { checkout(scm) }
     }
 
     stage("Build") {

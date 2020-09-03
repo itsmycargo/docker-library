@@ -25,7 +25,6 @@ http_request
 jdk-tool
 job-dsl
 kubernetes
-last-changes
 lockable-resources
 matrix-auth
 monitoring
@@ -43,7 +42,6 @@ scmskip
 slack
 strict-crumb-issuer
 timestamper
-uno-choice
 warnings-ng
 workflow-aggregator
 workflow-job

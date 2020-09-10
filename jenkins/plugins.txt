@@ -20,6 +20,7 @@ git
 git-changelog
 git-parameter
 github-branch-source
+github-checks
 github-oauth
 http_request
 jdk-tool

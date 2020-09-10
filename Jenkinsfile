@@ -4,7 +4,20 @@ defaultBuild()
 
 pipeline {
   options {
-    podTemplate(inheritFrom: "default")
+    parameters {
+      choice(
+        name: 'IMAGES',
+        choices: [
+          "airflow",
+          "builder/ruby-2.6",
+          "danger",
+          "deploy",
+          "diff-cover",
+          "imposm3",
+          "jenkins",
+        ]
+      )
+    }
     timeout(30)
   }
 
@@ -14,7 +27,7 @@ pipeline {
     stage("Build") {
       parallel {
         stage("airflow") {
-          when { changeset "airflow/**/*" }
+          when { anyOf { changeset "airflow/**/*"; expression { return params.IMAGES == "airflow" } } }
           steps {
             buildDocker("library/airflow", context: "airflow")
           }

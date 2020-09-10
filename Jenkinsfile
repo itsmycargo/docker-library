@@ -3,22 +3,20 @@
 defaultBuild()
 
 pipeline {
-  options {
-    parameters {
-      choice(
-        name: 'IMAGES',
-        choices: [
-          "airflow",
-          "builder/ruby-2.6",
-          "danger",
-          "deploy",
-          "diff-cover",
-          "imposm3",
-          "jenkins",
-        ]
-      )
-    }
-    timeout(30)
+  options { timeout(30) }
+  parameters {
+    choice(
+      name: 'IMAGES',
+      choices: [
+        "airflow",
+        "builder/ruby-2.6",
+        "danger",
+        "deploy",
+        "diff-cover",
+        "imposm3",
+        "jenkins",
+      ]
+    )
   }
 
   agent { kubernetes {} }

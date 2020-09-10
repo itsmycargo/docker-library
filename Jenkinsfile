@@ -6,7 +6,7 @@ pipeline {
   options { timeout(30) }
   parameters {
     choice(
-      name: 'IMAGES',
+      name: 'IMAGE',
       choices: [
         "airflow",
         "builder/ruby-2.6",
@@ -25,7 +25,7 @@ pipeline {
     stage("Build") {
       parallel {
         stage("airflow") {
-          when { anyOf { changeset "airflow/**/*"; expression { return params.IMAGES == "airflow" } } }
+          when { anyOf { changeset "airflow/**/*"; expression { return params.IMAGE == "airflow" } } }
           steps {
             buildDocker("library/airflow", context: "airflow")
           }

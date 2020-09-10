@@ -1,4 +1,4 @@
-FROM python:2.7-alpine
+FROM python:3.8.5-alpine
 
 RUN apk add --update --no-cache git
 RUN pip install diff_cover && diff-cover --version

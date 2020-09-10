@@ -8,7 +8,7 @@ RUN wget -q -O /usr/local/bin/kubectl \
 
 RUN apk add --no-cache --update ca-certificates git zip
 
-ARG HELM_VERSION=3.1.2
+ARG HELM_VERSION=3.3.1
 
 RUN wget -q "https://get.helm.sh/helm-v${HELM_VERSION}-linux-amd64.tar.gz" \
     && tar zx -f helm-v${HELM_VERSION}-linux-amd64.tar.gz linux-amd64/helm \

@@ -1,5 +1,6 @@
 Authlib
 Flask-OAuthlib
+apache-airflow-backport-providers-jira
 apache-airflow[aws] == AIRFLOW_VERSION
 apache-airflow[gcp] == AIRFLOW_VERSION
 apache-airflow[google_auth] == AIRFLOW_VERSION
@@ -18,6 +19,7 @@ numpy ~= 1.19.0
 pandas ~= 1.1.0
 pandas-datapackage-reader
 psycopg2-binary ~= 2.8.5
+py-trello
 pyarrow
 pycountry
 pygeos

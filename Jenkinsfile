@@ -36,6 +36,18 @@ pipeline {
           }
         }
 
+        stage("aws-cli") {
+          when {
+            anyOf {
+              changeset "aws-cli/**/*"
+              environment name: 'IMAGE', value: 'aws-cli'
+            }
+          }
+          steps {
+            buildDocker("library/aws-cli", context: "aws-cli")
+          }
+        }
+
         stage("builder/ruby-2.6") {
           when {
             anyOf {

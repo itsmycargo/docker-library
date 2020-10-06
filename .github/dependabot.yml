@@ -5,6 +5,10 @@ updates:
     schedule:
       interval: "daily"
   - package-ecosystem: "docker"
+    directory: "/aws-cli"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "docker"
     directory: "/builder"
     schedule:
       interval: "daily"

@@ -9,6 +9,7 @@ pipeline {
       name: 'IMAGE',
       choices: [
         "airflow",
+        "aws-cli",
         "builder/ruby-2.6",
         "danger",
         "deploy",

@@ -8,6 +8,7 @@ pipeline {
     choice(
       name: 'IMAGE',
       choices: [
+        "",
         "airflow",
         "aws-cli",
         "builder/ruby-2.6",

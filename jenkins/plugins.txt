@@ -28,7 +28,6 @@ job-dsl
 kubernetes
 lockable-resources
 matrix-auth
-monitoring
 parameterized-trigger
 pipeline-aws
 pipeline-config-history

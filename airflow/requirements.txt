@@ -17,6 +17,7 @@ geopandas
 geopy
 geovoronoi
 google-i18n-address
+h3
 kubernetes
 numpy
 pandas

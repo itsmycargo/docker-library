@@ -1,10 +1,8 @@
 ansicolor
 antisamy-markup-formatter
-artifact-manager-s3
 atlassian-jira-software-cloud
 authorize-project
 autocancel
-autograding
 aws-parameter-store
 blueocean
 cloudbees-jenkins-advisor

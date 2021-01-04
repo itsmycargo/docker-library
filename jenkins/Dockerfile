@@ -1,4 +1,3 @@
-FROM jenkins/jenkins:2.269-slim
-
+FROM jenkins/jenkins:2.273-slim
 COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
-RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
+RUN jenkins-plugin-cli -f /usr/share/jenkins/ref/plugins.txt

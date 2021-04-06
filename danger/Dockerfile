@@ -1,4 +1,4 @@
-FROM ruby:2.7-alpine
+FROM ruby:3.0.1-alpine
 
 RUN apk add --update --no-cache git
 RUN gem install danger -v8.0.5
